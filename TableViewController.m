@@ -8,7 +8,7 @@
 
 #import "TableViewController.h"
 #import "BlogPost.h"
-
+#import "DetailViewController.h"
 
 
 @interface TableViewController ()
@@ -151,6 +151,37 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSString *title = self.titlesArray[indexPath.row];
+//        [[segue destinationViewController] setDetailItem:title];
+//        NSIndexPath *indexPath =[self.tableView indexPathForSelectedRow];
+//        
+//        NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+//        
+//        NSURL *url = [NSURL URLWithString:[blogPost valueForKey:@"url"]];
+//        
+//        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//        
+// //       [webView loadRequest:request];
+//        [[segue destinationViewController] loadRequest:request];
+        NSIndexPath *indexPath =[self.tableView indexPathForSelectedRow];
+        
+        NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    
+        NSURL *url = [NSURL URLWithString:[blogPost valueForKey:@"url"]];
+        
+        
+        [[segue destinationViewController] setUrlstr:[blogPost valueForKey:@"url"]];
+        
+   //     [[segue destinationViewController]]
+        
+        
+    }
 }
 
 @end
