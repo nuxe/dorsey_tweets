@@ -7,6 +7,9 @@
 //
 
 #import "TableViewController.h"
+#import "BlogPost.h"
+
+
 
 @interface TableViewController ()
 
@@ -26,12 +29,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    BlogPost *blogPost = [[BlogPost alloc] init];
+    
+    blogPost.title = @"some title";
+    blogPost.author = @"some author";
+    
+    
+    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
+    
+    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
+  
+    NSError *error = nil;
+    
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
+    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,16 +60,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.blogPosts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +76,27 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [blogPost valueForKey:@"title"];
+    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+    
+    if ([blogPost valueForKey:@"thumbnail"]!=[NSNull null]){
+    
+    NSURL *imageURL = [NSURL URLWithString:[blogPost valueForKey:@"thumbnail"]];
+    
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
+    
+    
+    
+        cell.imageView.image = image; }
+    else {
+        NSURL *imageURL = [NSURL URLWithString:@"http://imgcdn.nrelate.com/image_cache/blog.teamtreehouse.com/94932f5bebe7ea6f7f2b7d1118c1b9db_thumb_Ts5Y1.png"];
+        
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
+        cell.imageView.image = image; 
+    }
+    
     
     return cell;
 }
