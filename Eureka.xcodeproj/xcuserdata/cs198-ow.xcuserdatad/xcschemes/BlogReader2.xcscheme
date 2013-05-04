@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF5FC5AB1707C3B500EED9AD"
-               BuildableName = "BlogReader2.app"
-               BlueprintName = "BlogReader2"
-               ReferencedContainer = "container:BlogReader2.xcodeproj">
+               BuildableName = "Eureka.app"
+               BlueprintName = "Eureka"
+               ReferencedContainer = "container:Eureka.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF5FC5AB1707C3B500EED9AD"
-            BuildableName = "BlogReader2.app"
-            BlueprintName = "BlogReader2"
-            ReferencedContainer = "container:BlogReader2.xcodeproj">
+            BuildableName = "Eureka.app"
+            BlueprintName = "Eureka"
+            ReferencedContainer = "container:Eureka.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF5FC5AB1707C3B500EED9AD"
-            BuildableName = "BlogReader2.app"
-            BlueprintName = "BlogReader2"
-            ReferencedContainer = "container:BlogReader2.xcodeproj">
+            BuildableName = "Eureka.app"
+            BlueprintName = "Eureka"
+            ReferencedContainer = "container:Eureka.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF5FC5AB1707C3B500EED9AD"
-            BuildableName = "BlogReader2.app"
-            BlueprintName = "BlogReader2"
-            ReferencedContainer = "container:BlogReader2.xcodeproj">
+            BuildableName = "Eureka.app"
+            BlueprintName = "Eureka"
+            ReferencedContainer = "container:Eureka.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

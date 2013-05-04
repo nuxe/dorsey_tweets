@@ -12,6 +12,8 @@
 
 
 @interface TableViewController ()
+-(IBAction)refresh:(id)sender;
+
 
 @end
 
@@ -29,26 +31,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+ 
     BlogPost *blogPost = [[BlogPost alloc] init];
     
     blogPost.title = @"some title";
     blogPost.author = @"some author";
     
     
-    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
     
-    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
-  
-    NSError *error = nil;
+    NSURL *blogURL2 = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/user_timeline.json?screen_name=jack&include_entities=t&include_rts=t"];
+    NSData *jsonData2 = [NSData dataWithContentsOfURL:blogURL2];
     
-    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    NSError *error2 = nil;
     
-
-   
-    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData2 options:0 error:&error2];
+    
+    self.blogPosts2 = jsonArray;
+    
+//    printf("%i",self.blogPosts2.count);
+    
     
 }
+
+-(IBAction)refresh:(id)sender{
+    [self viewDidLoad];
+    
+    [self.tableView reloadData];
+    
+}
+
+    
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -68,120 +82,59 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.blogPosts.count;
+    return self.blogPosts2.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    NSDictionary *blogPost = [self.blogPosts2 objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [blogPost valueForKey:@"title"];
-    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+    cell.textLabel.text = [blogPost valueForKey:@"text"];
     
-    if ([blogPost valueForKey:@"thumbnail"]!=[NSNull null]){
+    NSString *detailed = [[NSString alloc] initWithString:[[blogPost valueForKey:@"user"] valueForKey:@"name"]];
+    detailed = [detailed stringByAppendingString:@" "];
+    detailed = [detailed stringByAppendingString:[blogPost valueForKey:@"created_at"]];
     
-    NSURL *imageURL = [NSURL URLWithString:[blogPost valueForKey:@"thumbnail"]];
+    cell.detailTextLabel.text = detailed;
+    
+    NSURL *imageURL = [NSURL URLWithString:[[blogPost valueForKey:@"user"] valueForKey:@"profile_image_url"]];
     
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
     
+    cell.imageView.image = image;
     
     
-        cell.imageView.image = image; }
-    else {
-        NSURL *imageURL = [NSURL URLWithString:@"http://imgcdn.nrelate.com/image_cache/blog.teamtreehouse.com/94932f5bebe7ea6f7f2b7d1118c1b9db_thumb_Ts5Y1.png"];
-        
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
-        cell.imageView.image = image; 
-    }
-    
+
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSString *title = self.titlesArray[indexPath.row];
-//        [[segue destinationViewController] setDetailItem:title];
-//        NSIndexPath *indexPath =[self.tableView indexPathForSelectedRow];
-//        
-//        NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-//        
-//        NSURL *url = [NSURL URLWithString:[blogPost valueForKey:@"url"]];
-//        
-//        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//        
-// //       [webView loadRequest:request];
-//        [[segue destinationViewController] loadRequest:request];
+
         NSIndexPath *indexPath =[self.tableView indexPathForSelectedRow];
         
-        NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    
-        NSURL *url = [NSURL URLWithString:[blogPost valueForKey:@"url"]];
+        NSDictionary *blogPost = [self.blogPosts2 objectAtIndex:indexPath.row];
+   
         
+        NSString *someOtherString = [NSString stringWithFormat: @"https://twitter.com/jack/status/%@", [blogPost valueForKey:@"id_str"]];
         
-        [[segue destinationViewController] setUrlstr:[blogPost valueForKey:@"url"]];
+        [[segue destinationViewController] setUrlstr:someOtherString];
+ 
+          
         
-   //     [[segue destinationViewController]]
-        
-        
-    }
+                      }
 }
 
 @end

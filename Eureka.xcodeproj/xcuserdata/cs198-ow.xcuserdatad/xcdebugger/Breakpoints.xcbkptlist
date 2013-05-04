@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TableViewController.m"
-         timestampString = "386403906.55708"
+         timestampString = "389396150.588339"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176"
-         landmarkName = "-prepareForSegue:sender:"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

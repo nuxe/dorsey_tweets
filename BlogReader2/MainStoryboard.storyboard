@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Eureka!-->
+        <!--Table View Controller - Tweets!-->
         <scene sceneID="o0C-PQ-muc">
             <objects>
                 <tableViewController id="d9g-XG-fXe" customClass="TableViewController" sceneMemberID="viewController">
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="wAi-fl-dJ5" detailTextLabel="CVJ-8v-1ME" style="IBUITableViewCellStyleSubtitle" id="bHF-hL-ak7">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="wAi-fl-dJ5" detailTextLabel="JfD-25-E1p" style="IBUITableViewCellStyleSubtitle" id="bHF-hL-ak7">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -25,7 +25,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVJ-8v-1ME">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfD-25-E1p">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,8 +43,13 @@
                             <outlet property="delegate" destination="d9g-XG-fXe" id="tdn-zp-jzc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Eureka!" id="d7M-r0-Wvt">
+                    <navigationItem key="navigationItem" title="Tweets!" id="d7M-r0-Wvt">
                         <barButtonItem key="backBarButtonItem" title="Back" id="QDd-Gm-2Bh"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_action_refresh2.png" id="Cxh-jK-kWt">
+                            <connections>
+                                <action selector="refresh:" destination="d9g-XG-fXe" id="liq-UJ-dmI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7l-lD-OFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,6 +101,9 @@
             <point key="canvasLocation" x="-974" y="-77"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_action_refresh2.png" width="20" height="20"/>
+    </resources>
     <classes>
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
@@ -109,6 +117,9 @@
         </class>
         <class className="TableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

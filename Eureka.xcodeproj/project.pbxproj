@@ -20,17 +20,22 @@
 		FF5FC5D01707CC9300EED9AD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5FC5CF1707CC9300EED9AD /* TableViewController.m */; };
 		FF5FC5D31707EDD300EED9AD /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5FC5D21707EDD300EED9AD /* BlogPost.m */; };
 		FF5FC5D61707FE6700EED9AD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5FC5D51707FE6700EED9AD /* DetailViewController.m */; };
+		FFA1EC42170E4A5300D8FDB4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA1EC41170E4A5300D8FDB4 /* Default.png */; };
+		FFA1EC44170E50E800D8FDB4 /* E.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA1EC43170E50E700D8FDB4 /* E.png */; };
+		FFA1EC46170E517D00D8FDB4 /* @2xE.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA1EC45170E517D00D8FDB4 /* @2xE.png */; };
+		FFA5B4AA1735BC70000165EC /* ic_action_refresh2.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA5B4A91735BC70000165EC /* ic_action_refresh2.png */; };
+		FFA5B4AC1735BD7A000165EC /* refresh_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA5B4AB1735BD7A000165EC /* refresh_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF5FC5AC1707C3B500EED9AD /* BlogReader2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogReader2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5FC5AC1707C3B500EED9AD /* Eureka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eureka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5FC5AF1707C3B500EED9AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF5FC5B11707C3B500EED9AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF5FC5B31707C3B500EED9AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FF5FC5B71707C3B500EED9AD /* BlogReader2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlogReader2-Info.plist"; sourceTree = "<group>"; };
+		FF5FC5B71707C3B500EED9AD /* Eureka-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Eureka-Info.plist"; sourceTree = "<group>"; };
 		FF5FC5B91707C3B500EED9AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF5FC5BB1707C3B500EED9AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FF5FC5BD1707C3B500EED9AD /* BlogReader2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlogReader2-Prefix.pch"; sourceTree = "<group>"; };
+		FF5FC5BD1707C3B500EED9AD /* Eureka-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eureka-Prefix.pch"; sourceTree = "<group>"; };
 		FF5FC5BE1707C3B500EED9AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF5FC5BF1707C3B500EED9AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF5FC5C11707C3B600EED9AD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -43,6 +48,11 @@
 		FF5FC5D21707EDD300EED9AD /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		FF5FC5D41707FE6700EED9AD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FF5FC5D51707FE6700EED9AD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FFA1EC41170E4A5300D8FDB4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FFA1EC43170E50E700D8FDB4 /* E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = E.png; sourceTree = "<group>"; };
+		FFA1EC45170E517D00D8FDB4 /* @2xE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@2xE.png"; sourceTree = "<group>"; };
+		FFA5B4A91735BC70000165EC /* ic_action_refresh2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_action_refresh2.png; path = ../ic_action_refresh2.png; sourceTree = "<group>"; };
+		FFA5B4AB1735BD7A000165EC /* refresh_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refresh_2.png; path = ../refresh_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,11 @@
 		FF5FC5A31707C3B500EED9AD = {
 			isa = PBXGroup;
 			children = (
+				FFA1EC45170E517D00D8FDB4 /* @2xE.png */,
+				FFA1EC43170E50E700D8FDB4 /* E.png */,
+				FFA5B4A91735BC70000165EC /* ic_action_refresh2.png */,
+				FFA1EC41170E4A5300D8FDB4 /* Default.png */,
+				FFA5B4AB1735BD7A000165EC /* refresh_2.png */,
 				FF5FC5B51707C3B500EED9AD /* BlogReader2 */,
 				FF5FC5AE1707C3B500EED9AD /* Frameworks */,
 				FF5FC5AD1707C3B500EED9AD /* Products */,
@@ -71,7 +86,7 @@
 		FF5FC5AD1707C3B500EED9AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF5FC5AC1707C3B500EED9AD /* BlogReader2.app */,
+				FF5FC5AC1707C3B500EED9AD /* Eureka.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,10 +121,10 @@
 		FF5FC5B61707C3B500EED9AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FF5FC5B71707C3B500EED9AD /* BlogReader2-Info.plist */,
+				FF5FC5B71707C3B500EED9AD /* Eureka-Info.plist */,
 				FF5FC5B81707C3B500EED9AD /* InfoPlist.strings */,
 				FF5FC5BB1707C3B500EED9AD /* main.m */,
-				FF5FC5BD1707C3B500EED9AD /* BlogReader2-Prefix.pch */,
+				FF5FC5BD1707C3B500EED9AD /* Eureka-Prefix.pch */,
 				FF5FC5C11707C3B600EED9AD /* Default.png */,
 				FF5FC5C31707C3B600EED9AD /* Default@2x.png */,
 				FF5FC5C51707C3B600EED9AD /* Default-568h@2x.png */,
@@ -120,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF5FC5AB1707C3B500EED9AD /* BlogReader2 */ = {
+		FF5FC5AB1707C3B500EED9AD /* Eureka */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF5FC5C91707C3B600EED9AD /* Build configuration list for PBXNativeTarget "BlogReader2" */;
+			buildConfigurationList = FF5FC5C91707C3B600EED9AD /* Build configuration list for PBXNativeTarget "Eureka" */;
 			buildPhases = (
 				FF5FC5A81707C3B500EED9AD /* Sources */,
 				FF5FC5A91707C3B500EED9AD /* Frameworks */,
@@ -132,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = BlogReader2;
+			name = Eureka;
 			productName = BlogReader2;
-			productReference = FF5FC5AC1707C3B500EED9AD /* BlogReader2.app */;
+			productReference = FF5FC5AC1707C3B500EED9AD /* Eureka.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +161,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Kush Agrawal";
 			};
-			buildConfigurationList = FF5FC5A71707C3B500EED9AD /* Build configuration list for PBXProject "BlogReader2" */;
+			buildConfigurationList = FF5FC5A71707C3B500EED9AD /* Build configuration list for PBXProject "Eureka" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -158,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF5FC5AB1707C3B500EED9AD /* BlogReader2 */,
+				FF5FC5AB1707C3B500EED9AD /* Eureka */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +188,11 @@
 				FF5FC5C41707C3B600EED9AD /* Default@2x.png in Resources */,
 				FF5FC5C61707C3B600EED9AD /* Default-568h@2x.png in Resources */,
 				FF5FC5CD1707C3E100EED9AD /* MainStoryboard.storyboard in Resources */,
+				FFA1EC42170E4A5300D8FDB4 /* Default.png in Resources */,
+				FFA1EC44170E50E800D8FDB4 /* E.png in Resources */,
+				FFA1EC46170E517D00D8FDB4 /* @2xE.png in Resources */,
+				FFA5B4AA1735BC70000165EC /* ic_action_refresh2.png in Resources */,
+				FFA5B4AC1735BD7A000165EC /* refresh_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +285,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlogReader2/BlogReader2-Prefix.pch";
-				INFOPLIST_FILE = "BlogReader2/BlogReader2-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "BlogReader2/Eureka-Prefix.pch";
+				INFOPLIST_FILE = "BlogReader2/Eureka-Info.plist";
+				PRODUCT_NAME = Eureka;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -276,9 +296,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlogReader2/BlogReader2-Prefix.pch";
-				INFOPLIST_FILE = "BlogReader2/BlogReader2-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "BlogReader2/Eureka-Prefix.pch";
+				INFOPLIST_FILE = "BlogReader2/Eureka-Info.plist";
+				PRODUCT_NAME = Eureka;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -286,7 +306,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF5FC5A71707C3B500EED9AD /* Build configuration list for PBXProject "BlogReader2" */ = {
+		FF5FC5A71707C3B500EED9AD /* Build configuration list for PBXProject "Eureka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF5FC5C71707C3B600EED9AD /* Debug */,
@@ -295,13 +315,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF5FC5C91707C3B600EED9AD /* Build configuration list for PBXNativeTarget "BlogReader2" */ = {
+		FF5FC5C91707C3B600EED9AD /* Build configuration list for PBXNativeTarget "Eureka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF5FC5CA1707C3B600EED9AD /* Debug */,
 				FF5FC5CB1707C3B600EED9AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

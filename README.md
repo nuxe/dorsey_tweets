@@ -1,8 +1,8 @@
-BlogReader-2
+Dorsey Tweets
 ============
 
-iOS blog reader application that parses JSON data and displays it
+Makes a call to the twitter search API, parses the JSON and displays Jack Dorsey's tweets
 
-![Alt text](screenshot.png "I call it Eureka!")
+![Alt text](Twitter_1.png "I call it Eureka!")
 
-![Alt text](screenshot2.png "I call it Eureka!")
+![Alt text](Twitter_2.png "I call it Eureka!")

@@ -35,6 +35,7 @@
         self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
+
 //- (void)configureView2
 //{
 //    // Update the user interface for the detail item.
